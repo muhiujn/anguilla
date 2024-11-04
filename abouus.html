@@ -1,0 +1,368 @@
+<html>
+<head>
+    <base href="index.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Anguilla Animal Rescue Foundation</title>
+    <meta name="description" content="Learn about the Anguilla Animal Rescue Foundation, our mission, values, and the dedicated team serving our community.">
+    <meta name="author" content="Anguilla Animal Rescue Foundation">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .navbar-brand {
+            font-family: 'Droid Sans', sans-serif;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        .nav-link {
+            color: #34495e;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #e74c3c;
+        }
+        .about-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-heading h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .section-heading h3 {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        .about-content {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+        .about-section {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+        .timeline:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 40px;
+            width: 2px;
+            margin-left: -1.5px;
+            background-color: #e9ecef;
+        }
+        .timeline > li {
+            position: relative;
+            margin-bottom: 50px;
+            min-height: 50px;
+        }
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+        .timeline > li:after {
+            clear: both;
+        }
+        .timeline > li .timeline-panel {
+            float: right;
+            position: relative;
+            width: 100%;
+            padding: 0 20px 0 100px;
+            text-align: left;
+        }
+        .timeline > li .timeline-image {
+            left: 0;
+            margin-left: 0;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            z-index: 100;
+            background-color: #e74c3c;
+            color: #fff;
+            border-radius: 100%;
+            border: 7px solid #f1f1f1;
+            text-align: center;
+        }
+        .timeline > li .timeline-image h4 {
+            font-size: 10px;
+            margin-top: 12px;
+            line-height: 14px;
+        }
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+            text-align: left;
+            padding: 0 20px 0 100px;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0;
+        }
+        .footer h4 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        .social-icons {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: #ecf0f1;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #e74c3c;
+        }
+        .footer-bottom {
+            background-color: #1a252f;
+            color: #7f8c8d;
+            padding: 15px 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Anguilla Animal Rescue Foundation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#featured">Featured Resource</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-header">
+        <h1 class="display-4">About Us</h1>
+        <p class="lead">Discover our story, mission, and the people behind Anguilla Animal Rescue Foundation</p>
+    </header>
+
+    <main class="about-content">
+        <div class="container">
+            <section class="about-section">
+                <div class="section-heading">
+                    <h2>Our Mission</h2>
+                    <h3>Committed to Animal Welfare</h3>
+                </div>
+                <p>At Anguilla Animal Rescue Foundation, our mission is to rescue and care for abandoned and surrendered animals, providing them with the necessary medical care, socialization, and love they deserve. We strive to be a beacon of compassion, offering resources and support to our community and fostering a culture of responsible pet ownership.</p>
+            </section>
+
+            <section class="about-section">
+                <div class="section-heading">
+                    <h2>Our Vision</h2>
+                    <h3>A World Where Every Animal is Loved and Cared For</h3>
+                </div>
+                <p>We envision a world where every animal has the opportunity to live in a loving and caring home. Our goal is to be the premier destination for animal welfare, fostering an environment where individuals can connect, learn, and serve together to ensure the well-being of all animals.</p>
+            </section>
+
+            <section class="about-section">
+                <div class="section-heading">
+                    <h2>Our Values</h2>
+                    <h3>Guiding Principles That Shape Our Service</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4><i class="fas fa-paw"></i> Animal-Centered</h4>
+                        <p>We place the well-being of animals at the core of everything we do, ensuring that our resources and services align with the highest standards of animal care.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4><i class="fas fa-hands-helping"></i> Community-Focused</h4>
+                        <p>We believe in the power of community and strive to create a welcoming, inclusive environment for all who seek to support and care for animals in need.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4><i class="fas fa-lightbulb"></i> Continuous Learning</h4>
+                        <p>We are committed to lifelong learning and growth, constantly seeking new ways to enrich our resources and services to meet the evolving needs of our community and the animals we serve.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <div class="section-heading">
+                    <h2>Our Team</h2>
+                    <h3>Dedicated Individuals Serving Our Community</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 team-member">
+                        <img src="gallery/image_16.jpg" alt="Johanna Pasila - Role: President">
+                        <h4>Johanna Pasila</h4>
+                        <p>Role: President</p>
+                    </div>
+                    <div class="col-md-4 team-member">
+                        <img src="gallery/image_17.jpg" alt="Mark Baumwell - Role: Treasurer">
+                        <h4>Mark Baumwell</h4>
+                        <p>Role: Treasurer</p>
+                    </div>
+                    <div class="col-md-4 team-member">
+                        <img src="gallery/image_18.jpg" alt="Other Member - Role: Secretary">
+                        <h4>Other Member</h4>
+                        <p>Role: Secretary</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <div class="section-heading">
+                    <h2>Our History</h2>
+                    <h3>A Journey of Compassion and Service</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image">
+                            <h4>2012</h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Humble Beginnings</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Anguilla Animal Rescue Foundation started as a small initiative to rescue and care for abandoned animals in the community.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>2015</h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Expansion and Growth</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>As demand grew, we expanded our services and resources to reach a wider community, including medical care and adoption programs.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <h4>2023</h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Digital Transformation</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>In response to global challenges, we launched our online platform, making our resources accessible to people around the world.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>Today</h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Serving with Purpose</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>We continue to grow and adapt, always focused on our mission to rescue and care for animals in need.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About Us</h4>
+                    <p>The Anguilla Animal Rescue Foundation is dedicated to rescuing and caring for animals in need since 2012.</p>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/channel/UCFodje4K3Wd7CcA0YeF41Gg"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/christianresource.library?igsh=MWU3Y2Y4ODRlcG5mYg=="><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Our Services</a></li>
+                        <li><a href="Contactus.html">Contact Us</a></li>
+                        <li><a href="donation.html">Donations</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>Anguilla Animal Rescue Foundation<br>
+                    AARC c/o Mark Baumwell 549 Lakeshore Blvd. #3 Incline Village, NV 89451 USA</p>
+                    <p>Email: info@aarf.org</p>
+                    <p>Phone: (775) 123-4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

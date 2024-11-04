@@ -1,0 +1,458 @@
+<html>
+<head>
+    <base href="index.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anguilla Animal Rescue Foundation - Our Commitment to Animal Welfare</title>
+    <meta name="description" content="Anguilla Animal Rescue Foundation: dedicated to rescuing and caring for animals in need.">
+    <meta name="author" content="Anguilla Animal Rescue Foundation">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('gallery/hero.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .navbar-brand {
+            font-family: 'Droid Sans', sans-serif;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        .nav-link {
+            color: #34495e;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #e74c3c;
+        }
+        .btn-hero {
+            background-color: #e74c3c;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        .btn-hero:hover {
+            background-color: #c0392b;
+        }
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-heading h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .section-heading h3 {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        .service-box {
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 30px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .service-box:hover {
+            transform: translateY(-10px);
+        }
+        .service-box i {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        .gallery-item {
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .gallery-item img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #e74c3c;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0;
+        }
+        .footer h4 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        .social-icons {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: #ecf0f1;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #e74c3c;
+        }
+        .footer-bottom {
+            background-color: #1a252f;
+            color: #7f8c8d;
+            padding: 15px 0;
+            font-size: 0.9rem;
+        }
+        .upcoming-events {
+            background-color: #ecf0f1;
+            padding: 50px 0;
+        }
+        .event-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .event-date {
+            font-size: 1.2rem;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .featured-resource {
+            background-color: #3498db;
+            color: #fff;
+            padding: 50px 0;
+        }
+        .featured-resource img {
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Anguilla Animal Rescue Foundation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="abouus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featured">Featured Resource</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contactus.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="header">
+        <h1 class="display-3 mb-4">Anguilla Animal Rescue Foundation</h1>
+        <h2 class="display-6 mb-5">Our Commitment to Animal Welfare</h2>
+        <a href="Contactus.html" class="btn btn-hero btn-lg">Learn More</a>
+        <p class="mt-4 small">Anguilla Animal Rescue Foundation - EIN 80-0773777</p>
+    </header>
+
+    <main>
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>About the Anguilla Animal Rescue Foundation</h2>
+                    <h3>Our mission is to rescue and care for animals in need.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <p>The Anguilla Animal Rescue Foundation (AARF) was established in 2012 with the goal of providing rescue and care for abandoned and surrendered animals. We believe that every animal deserves a loving home and proper care.</p>
+                        <p>Our foundation offers a wide range of services, including medical care, socialization, and adoption programs. We also engage with the local community, educating individuals about responsible pet ownership and humane treatment of animals.</p>
+                        <p>As a dedicated nonprofit organization operating in The Valley, Anguilla, we are committed to fostering a culture of compassion and responsible pet ownership. Our work is grounded in the belief that every animal deserves a chance at a happy and healthy life.</p>
+                        <p>One of our core programs focuses on providing support to families and individuals who are unable to care for their pets. We understand the challenges they face and aim to provide practical assistance and resources.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-5 bg-light">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Our Services</h2>
+                    <h3>We're here to offer practical support and resources for animals in need.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <i class="fas fa-paw"></i>
+                            <h3>Animal Rescue</h3>
+                            <p>We rescue abandoned and surrendered animals, providing them with safe shelter and necessary medical care.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <i class="fas fa-users"></i>
+                            <h3>Community Engagement</h3>
+                            <p>We educate the community about responsible pet ownership and humane treatment of animals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <i class="fas fa-heart"></i>
+                            <h3>Adoption Programs</h3>
+                            <p>We find loving forever homes for rescued animals, ensuring they receive the care and love they deserve.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>Volunteer Opportunities</h3>
+                            <p>We offer opportunities for individuals to volunteer their time and talents to make a difference in the lives of animals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <i class="fas fa-pray"></i>
+                            <h3>Educational Workshops</h3>
+                            <p>We host workshops and outreach programs to educate the community about animal welfare and responsible pet ownership.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <i class="fas fa-hands-helping"></i>
+                            <h3>Family Support</h3>
+                            <p>We provide mentorship, guidance, and practical assistance for families facing challenges with their pets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-5">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Our Story</h2>
+                    <h3>See the impact the Anguilla Animal Rescue Foundation is having on our community.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 gallery-item">
+                        <img src="gallery/gal2.jpg" alt="Rescued animals at a shelter" class="img-fluid">
+                        <div class="gallery-caption">
+                            <h4>Rescue Operations</h4>
+                            <p>Providing safe shelter and care for rescued animals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <img src="gallery/gal3.jpg" alt="Community outreach event" class="img-fluid">
+                        <div class="gallery-caption">
+                            <h4>Community Outreach</h4>
+                            <p>Educating the community about animal welfare and responsible pet ownership.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <img src="gallery/gl.jpg" alt="Adoption event" class="img-fluid">
+                        <div class="gallery-caption">
+                            <h4>Adoption Events</h4>
+                            <p>Finding loving forever homes for rescued animals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-5 bg-light">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>What People Are Saying</h2>
+                    <h3>Hear how the Anguilla Animal Rescue Foundation has made a difference in the lives of others.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <img src="gallery/image_13.jpg" alt="Sarah M." class="img-fluid mx-auto d-block">
+                            <p>"After adopting a dog from AARF, I realized the true meaning of unconditional love. The foundation provided excellent support and resources, making the adoption process smooth and enjoyable."</p>
+                            <p class="font-weight-bold">- Sarah M.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <img src="gallery/image_14.jpg" alt="Mark T." class="img-fluid mx-auto d-block">
+                            <p>"I've always wanted to adopt a pet, but I didn't know where to start. The Anguilla Animal Rescue Foundation guided me through the process and ensured I was well-prepared to provide a loving home for my new furry friend."</p>
+                            <p class="font-weight-bold">- Mark T.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <img src="gallery/image_15.jpg" alt="Emily K." class="img-fluid mx-auto d-block">
+                            <p>"The Anguilla Animal Rescue Foundation is a beacon of hope for animals in need. Their dedication to animal welfare and community engagement is truly inspiring. I'm proud to support their mission."</p>
+                            <p class="font-weight-bold">- Emily K.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="upcoming-events">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Upcoming Events</h2>
+                    <h3>Join us for these exciting community gatherings</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="event-card">
+                            <h4>Adoption Fair</h4>
+                            <p class="event-date">Every Saturday, 10:00 AM</p>
+                            <p>Join us for an adoption fair where you can meet and adopt rescued animals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="event-card">
+                            <h4>Community Workshop</h4>
+                            <p class="event-date">October 15, 2:00 PM</p>
+                            <p>Learn about responsible pet ownership and animal welfare at our community workshop.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="event-card">
+                            <h4>Fundraising Gala</h4>
+                            <p class="event-date">November 22, 7:00 PM</p>
+                            <p>Join us for a night of fun and fundraising to support our mission.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-resource">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2>Featured Resource</h2>
+                        <h3>"Guide to Responsible Pet Ownership" by AARF</h3>
+                        <p>This comprehensive guide offers practical advice on providing a loving and caring home for your pets. It covers topics such as medical care, socialization, and responsible pet ownership.</p>
+                        <a href="Contactus.html" class="btn btn-light">Reserve a Copy - Contact Us</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="gallery/ktab.jpg" alt="Featured guide cover" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About Us</h4>
+                    <p>The Anguilla Animal Rescue Foundation is dedicated to rescuing and caring for animals in need since 2012.</p>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/channel/UCFodje4K3Wd7CcA0YeF41Gg"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/christianresource.library?igsh=MWU3Y2Y4ODRlcG5mYg=="><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="abouus.html">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="Contactus.html">Contact Us</a></li>
+                        <li><a href="donation.html">Donations</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>Anguilla Animal Rescue Foundation<br>
+                    AARC c/o Mark Baumwell 549 Lakeshore Blvd. #3 Incline Village, NV 89451 USA</p>
+                    <p>Email: info@aarf.org</p>
+                    <p>Phone: (775) 123-4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container text-center">
+            <p>&copy; 2024 Anguilla Animal Rescue Foundation. All rights reserved. EIN: 80-0773777</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
